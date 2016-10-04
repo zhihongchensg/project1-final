@@ -97,7 +97,7 @@ function init () {
     console.log('PLAYER A ' + PlayerAScore)
     console.log('PLAYER B ' + PlayerBScore)
     if (PlayerAScore >= 3 || PlayerBScore >= 3) {
-      if (PlayerAScore - PlayerBScore >= 2 || PlayerBScore - PlayerAScore >= 2) {
+      if (Math.abs(PlayerAScore - PlayerBScore) >= 2) {
         document.querySelectorAll('.boxLeftBottom p')[0].innerHTML = 'PLAYER ' + currentPlayer + ' WINZ WINZ WINZ'
         alert('Player ' + currentPlayer + ' Wins')
       // startGamebutton.disabled = false
